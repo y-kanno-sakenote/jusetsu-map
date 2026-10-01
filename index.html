@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>徳島 重説下調べマップ</title>
+  <script type="module" crossorigin src="/jusetsu-map/assets/index-gjX3H1ZZ.js"></script>
+  <link rel="stylesheet" crossorigin href="/jusetsu-map/assets/index-YLJTwNgP.css">
+</head>
+<body>
+<header>
+  <h1 id="title">徳島 重説下調べマップ</h1>
+  <select id="town-sel" aria-label="市町村"></select>
+  <p class="caution">事前調査用。重説では原本（町・県）で要確認</p>
+</header>
+<main>
+  <div class="map-col">
+    <div id="map" role="region" aria-label="地図"></div>
+    <div id="map-credit" class="map-credit no-print" hidden></div>
+  </div>
+  <aside aria-label="調査結果">
+    <form id="chiban-form" class="chiban-form" autocomplete="off">
+      <select id="oaza-sel" aria-label="大字" required><option value="">大字</option></select>
+      <input id="chiban-in" type="text" enterkeyhint="search" placeholder="地番（例 123-4）" aria-label="地番" required>
+      <button type="submit" class="btn">探す</button>
+    </form>
+    <div id="panel">
+      <p class="placeholder">地図をタップするか、大字と地番で探すと、その地点の調査結果を表示します</p>
+    </div>
+    <section id="credit-more" class="credit-more no-print" aria-label="出典と責任の所在" hidden></section>
+  </aside>
+</main>
+</body>
+</html>
