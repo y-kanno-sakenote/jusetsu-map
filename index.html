@@ -4,13 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>徳島 重説下調べマップ</title>
-  <script type="module" crossorigin src="/jusetsu-map/assets/index-Bb9rRDuh.js"></script>
-  <link rel="stylesheet" crossorigin href="/jusetsu-map/assets/index-DhhDq4mH.css">
+  <script type="module" crossorigin src="/jusetsu-map/assets/index-BcKg_pOP.js"></script>
+  <link rel="stylesheet" crossorigin href="/jusetsu-map/assets/index-Bv3YnRVJ.css">
 </head>
 <body>
 <header>
   <h1 id="title">徳島 重説下調べマップ</h1>
-  <select id="town-sel" aria-label="市町村"></select>
   <p class="caution">事前調査用。重説では原本（町・県）で要確認</p>
 </header>
 <main>
@@ -19,19 +18,15 @@
     <div id="map-credit" class="map-credit no-print" hidden></div>
   </div>
   <aside aria-label="調査結果">
-    <button type="button" id="chiban-toggle" class="chiban-toggle" aria-controls="addr-form chiban-form">住所・地番で探す›</button>
-    <form id="addr-form" class="chiban-form addr-form" autocomplete="off">
-      <input id="addr-in" type="text" enterkeyhint="search" placeholder="住所で探す（例 徳島市北矢三町3丁目8-12）" aria-label="住所で探す" required>
-      <button type="submit" class="btn">探す</button>
-    </form>
-    <form id="chiban-form" class="chiban-form" autocomplete="off">
-      <select id="oaza-sel" aria-label="大字" required><option value="">大字</option></select>
-      <input id="chiban-in" type="text" enterkeyhint="search" placeholder="地番（例 123-4）" aria-label="地番" required>
+    <button type="button" id="chiban-toggle" class="chiban-toggle" aria-controls="search-form">住所・地番で探す›</button>
+    <form id="search-form" class="chiban-form search-form" autocomplete="off">
+      <select id="town-sel" aria-label="市町村"></select>
+      <input id="search-in" type="text" enterkeyhint="search" placeholder="住所・地番（例 藍住町奥野字猪熊37-7）" aria-label="住所・地番" required>
       <button type="submit" class="btn">探す</button>
     </form>
     <p id="chiban-note" class="chiban-note" hidden>大字・字はクリック地点の目安（国勢調査の区域・近くの筆から）。法的な字界ではありません</p>
     <div id="panel">
-      <p class="placeholder">地図をタップするか、大字と地番で探すと、その地点の調査結果を表示します</p>
+      <p class="placeholder">地図をタップするか、住所・地番で探すと、その地点の調査結果を表示します</p>
     </div>
     <section id="credit-more" class="credit-more no-print" aria-label="出典と責任の所在" hidden></section>
   </aside>
